@@ -1,0 +1,35 @@
+### logout
+POST http://localhost:3333/users
+
+### list users
+GET http://localhost:3333/users
+# Cookie: sessionId=8b448b72-f91e-4926-9df7-75d8fd7831fc
+
+### get user by id
+GET http://localhost:3333/users/5695beb1-44a7-4fae-a4d9-a09c0ffe7bdd
+
+### create user
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "Dêssa Lessa",
+    "email": "sss.andressalessa@gmail.com",
+    "password": "123456"
+}
+
+
+### update transacion
+PUT http://localhost:3333/users/2
+Content-Type: application/json
+
+{
+    "title": "Minha segunda tarefa",
+    "description": "Descrição da minha segunda tarefa"
+}
+
+### delete transacion
+DELETE http://localhost:3333/transactions/2
+
+### mark transacion as complete
+PATCH http://localhost:3333/transactions/1/complete
