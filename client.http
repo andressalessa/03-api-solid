@@ -18,6 +18,14 @@ Content-Type: application/json
     "password": "123456"
 }
 
+### login
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "sss.andressalessa@gmail.com",
+    "password": "123456"
+}
 
 ### update transacion
 PUT http://localhost:3333/users/2
