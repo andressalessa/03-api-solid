@@ -1,3 +1,6 @@
+### me 
+GET http://localhost:3333/me
+
 ### logout
 POST http://localhost:3333/users
 
@@ -27,17 +30,10 @@ Content-Type: application/json
     "password": "123456"
 }
 
-### update transacion
-PUT http://localhost:3333/users/2
-Content-Type: application/json
+### profile
+GET http://localhost:3333/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZGNmNDNhZC04MGIyLTQ0MzEtYjM4Ny05ZWM2MTIzNWNkZTgiLCJpYXQiOjE3NjIzODE2MTF9.sGt-n5JUFaKvn--Z1yuzuWsbsZyVjUL7pdEBDjpbKLo
 
-{
-    "title": "Minha segunda tarefa",
-    "description": "Descrição da minha segunda tarefa"
-}
-
-### delete transacion
-DELETE http://localhost:3333/transactions/2
-
-### mark transacion as complete
-PATCH http://localhost:3333/transactions/1/complete
+### refresh token
+PATCH http://localhost:3333/token/refresh
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3M2Q3ZGY3Yi04ZmI1LTRkNTctOGM4OS02OWQzYTdkNmNjNmEiLCJpYXQiOjE3Njk0NjkzMzMsImV4cCI6MTc3MDA3NDEzM30.cOMWeUEcweH_lqvihcueiMAd0P0JDa6r8yere3z-QNg
