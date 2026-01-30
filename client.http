@@ -1,0 +1,86 @@
+### me 
+GET http://localhost:3333/me
+
+### logout
+POST http://localhost:3333/users
+
+### list users
+GET http://localhost:3333/users
+# Cookie: sessionId=8b448b72-f91e-4926-9df7-75d8fd7831fc
+
+### get user by id
+GET http://localhost:3333/users/5695beb1-44a7-4fae-a4d9-a09c0ffe7bdd
+
+### create user
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "Dêssa Lessa",
+    "email": "sss.andressalessa@gmail.com",
+    "password": "123456"
+}
+
+### create user
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "Dêssa Admin",
+    "email": "admin.andressalessa@gmail.com",
+    "password": "123456"
+}
+
+### login
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "sss.andressalessa@gmail.com",
+    "password": "123456"
+}
+
+### login admin
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "admin.andressalessa@gmail.com",
+    "password": "123456"
+}
+
+### profile
+GET http://localhost:3333/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZGNmNDNhZC04MGIyLTQ0MzEtYjM4Ny05ZWM2MTIzNWNkZTgiLCJpYXQiOjE3NjIzODE2MTF9.sGt-n5JUFaKvn--Z1yuzuWsbsZyVjUL7pdEBDjpbKLo
+
+### refresh token
+PATCH http://localhost:3333/token/refresh
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3M2Q3ZGY3Yi04ZmI1LTRkNTctOGM4OS02OWQzYTdkNmNjNmEiLCJpYXQiOjE3Njk0NjkzMzMsImV4cCI6MTc3MDA3NDEzM30.cOMWeUEcweH_lqvihcueiMAd0P0JDa6r8yere3z-QNg
+
+
+### create gym (sem admin)
+POST http://localhost:3333/gyms
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUVNQkVSIiwic3ViIjoiNzNkN2RmN2ItOGZiNS00ZDU3LThjODktNjlkM2E3ZDZjYzZhIiwiaWF0IjoxNzY5NjQ1NDgwLCJleHAiOjE3Njk2NDYwODB9.9qHYk8io5jaXTBLcB24qHXEV8xlFLVXE4UFDJucgA70
+
+{
+    "title": "Academia da Dêssa",
+    "description": "Academia da Dêssa",
+    "phone": "1234567890",
+    "latitude": -23.5682,
+    "longitude": -46.6534
+}
+
+
+### create gym (com admin)
+POST http://localhost:3333/gyms
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiIyZjUxYWQ5NS00MDRlLTRjZDktYTFjNy02ZjBjMTIyOTYzY2IiLCJpYXQiOjE3Njk2NDU2NjYsImV4cCI6MTc2OTY0NjI2Nn0.1EAePbdVYFpkWUQrwkg93sQm9ju41M_784JS7uHkJP4
+
+{
+    "title": "Academia da Dêssa Admin",
+    "description": "Academia da Dêssa Admin",
+    "phone": "1234567890",
+    "latitude": -23.5682,
+    "longitude": -46.6534
+}
